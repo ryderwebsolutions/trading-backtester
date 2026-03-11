@@ -23,10 +23,18 @@ Data must be a CSV with a datetime index in the first column and at least a
 
 ### Running the backtester
 
-Install dependencies:
+You can either install from the requirements file or build the package locally:
 
 ```bash
 pip install -r requirements.txt
+# or
+pip install .
+```
+
+Installing using `pip install .` will register a `backtester` console script so you can run:
+
+```bash
+backtester data/your_history.csv --strategy ma --short 20 --long 50
 ```
 
 Then invoke the CLI script:
