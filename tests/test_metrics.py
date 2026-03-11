@@ -4,9 +4,10 @@ import pytest
 from metrics import sharpe_ratio, max_drawdown, total_return
 
 def test_sharpe_ratio_constant():
+    # constant returns should produce nan Sharpe (zero volatility)
     returns = pd.Series([0.01] * 252)
     sr = sharpe_ratio(returns)
-    assert sr == pytest.approx(np.sqrt(252) * 0.01 / 0)
+    assert np.isnan(sr)
 
 
 def test_max_drawdown():
