@@ -18,12 +18,47 @@ trading-backtester
 
 ## Usage
 
-1. Place historical CSV files in the `data/` directory. The CSV must have a datetime index and at least a `Close` column.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run `python main.py` to execute an example backtest.
+Data must be a CSV with a datetime index in the first column and at least a
+`Close` price column. Put example files under `data/` as shown.
+
+### Running the backtester
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then invoke the CLI script:
+
+```bash
+python main.py data/your_history.csv --strategy ma --short 20 --long 50
+```
+
+You can switch strategies (`ma`, `meanrev`, `rsi`) and tune parameters via
+command‑line options. Transaction costs and slippage can be specified with
+`--cost` and `--slippage`.
+
+Example output:
+
+```
+$ python main.py data/sample.csv --strategy rsi --period 3 --lower 25 --upper 75
+Performance:
+  sharpe_ratio: 0.1234
+  max_drawdown: -0.0456
+  total_return: 0.0789
+```
+
+### Strategies
+
+- **ma**: moving average crossover
+- **meanrev**: z‑score mean reversion
+- **rsi**: RSI overbought/oversold
+
+Add your own by dropping a class in `trading_backtester/strategies` with a
+`generate_signals(df)` method that returns a DataFrame containing a `signal`
+column.
+
 
 ## Writing Strategies
 
