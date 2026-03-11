@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import pytest
 from metrics import sharpe_ratio, max_drawdown, total_return
 
 def test_sharpe_ratio_constant():

@@ -12,7 +12,7 @@ class BacktestEngine:
         signals = self.strategy.generate_signals(self.data)
         df = self.data.copy()
         df = df.join(signals)
-        df['signal'].fillna(0, inplace=True)
+        df['signal'] = df['signal'].fillna(0)
         df['position'] = df['signal'].shift(1).fillna(0)
         df['returns'] = df['Close'].pct_change()
         df['strategy_returns'] = df['returns'] * df['position']
@@ -22,7 +22,7 @@ class BacktestEngine:
     def summary(self):
         if self.results is None:
             raise RuntimeError("Backtest not run yet")
-        from .metrics import sharpe_ratio, max_drawdown, total_return
+        from metrics import sharpe_ratio, max_drawdown, total_return
         sr = sharpe_ratio(self.results['strategy_returns'])
         md = max_drawdown(self.results['strategy_returns'])
         tr = total_return(self.results['strategy_returns'])
