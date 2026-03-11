@@ -34,3 +34,12 @@ Create a new class in the `strategies/` folder with a `generate_signals(data)` m
 - Sharpe ratio
 - Max drawdown
 - Total return
+
+## Testing
+
+The project includes basic tests powered by `pytest`. After installing requirements, run:
+
+```bash
+pytest
+```
+
