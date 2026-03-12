@@ -72,6 +72,12 @@ column.
 A simple example script is provided in the `examples/` directory to show
 importing the library programmatically.
 
+---
+
+## License
+
+This project is released under the MIT License. See the `LICENSE` file for details.
+
 
 ## Writing Strategies
 
