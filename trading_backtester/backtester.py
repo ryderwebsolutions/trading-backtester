@@ -48,8 +48,19 @@ class BacktestEngine:
             sharpe_ratio,
             max_drawdown,
             total_return,
+            compound_annual_growth_rate,
+            annual_volatility,
         )
-        sr = sharpe_ratio(self.results['strategy_returns'])
-        md = max_drawdown(self.results['strategy_returns'])
-        tr = total_return(self.results['strategy_returns'])
-        return {'sharpe_ratio': sr, 'max_drawdown': md, 'total_return': tr}
+        r = self.results['strategy_returns']
+        sr = sharpe_ratio(r)
+        md = max_drawdown(r)
+        tr = total_return(r)
+        cagr = compound_annual_growth_rate(r)
+        vol = annual_volatility(r)
+        return {
+            'sharpe_ratio': sr,
+            'max_drawdown': md,
+            'total_return': tr,
+            'cagr': cagr,
+            'annual_volatility': vol,
+        }

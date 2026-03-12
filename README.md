@@ -55,6 +55,8 @@ Performance:
   sharpe_ratio: 0.1234
   max_drawdown: -0.0456
   total_return: 0.0789
+  cagr: 0.0678
+  annual_volatility: 0.1543
 ```
 
 ### Strategies
@@ -66,6 +68,9 @@ Performance:
 Add your own by dropping a class in `trading_backtester/strategies` with a
 `generate_signals(df)` method that returns a DataFrame containing a `signal`
 column.
+
+A simple example script is provided in the `examples/` directory to show
+importing the library programmatically.
 
 
 ## Writing Strategies

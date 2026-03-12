@@ -18,3 +18,5 @@ def test_backtest_runs():
     assert 'sharpe_ratio' in summary
     assert 'max_drawdown' in summary
     assert 'total_return' in summary
+    assert 'cagr' in summary
+    assert 'annual_volatility' in summary
