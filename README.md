@@ -85,7 +85,14 @@ streamlit run webapp/app.py
 ```
 
 You can upload a CSV, choose strategies/parameters, and immediately view
-performance and equity charts.
+performance and equity charts. Example screenshots are shown below so an
+employer can get a feel for the UI without running it:
+
+![Backtester home](Screenshot 2026-03-12 115752.png)
+
+![Equity curve and results](Screenshot 2026-03-12 115812.png)
+
+You may add your own screenshots or replace these images as needed.
 
 ---
 
