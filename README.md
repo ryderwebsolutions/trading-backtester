@@ -92,7 +92,6 @@ employer can get a feel for the UI without running it:
 
 ![Equity curve and results](equity.png)
 
-You may add your own screenshots or replace these images as needed.
 
 ---
 
