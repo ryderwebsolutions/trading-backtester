@@ -1,0 +1,2 @@
+[console_scripts]
+backtester = trading_backtester.main:main

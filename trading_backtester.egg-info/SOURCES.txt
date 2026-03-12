@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_backtester.py
+tests/test_metrics.py
+tests/test_webapp.py
+trading_backtester/__init__.py
+trading_backtester/backtester.py
+trading_backtester/main.py
+trading_backtester/metrics.py
+trading_backtester.egg-info/PKG-INFO
+trading_backtester.egg-info/SOURCES.txt
+trading_backtester.egg-info/dependency_links.txt
+trading_backtester.egg-info/entry_points.txt
+trading_backtester.egg-info/requires.txt
+trading_backtester.egg-info/top_level.txt
