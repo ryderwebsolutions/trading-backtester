@@ -1,5 +1,9 @@
 # Trading Backtester
 
+[![Python package](https://github.com/username/trading-backtester/actions/workflows/python-package.yml/badge.svg)](https://github.com/username/trading-backtester/actions/workflows/python-package.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+
 A simple Python backtesting engine that loads historical price data from CSV files and evaluates trading strategies such as moving average crossover and mean reversion.
 
 ## Structure
