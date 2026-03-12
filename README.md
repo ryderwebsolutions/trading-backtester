@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 
-A simple Python backtesting engine that loads historical price data from CSV files and evaluates trading strategies such as moving average crossover and mean reversion.
+Modular Python backtesting engine for evaluating systematic trading strategies on historical market data, with CLI tooling, performance analytics, and a Streamlit interface.
 
 ## Structure
 
