@@ -16,6 +16,7 @@ dependencies = [
     "numpy",
     "matplotlib",  # for plotting in examples
     "seaborn",     # optional visualizations
+    "streamlit",   # interactive web UI
 ]
 
 [project.scripts]

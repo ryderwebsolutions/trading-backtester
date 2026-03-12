@@ -76,6 +76,17 @@ column.
 A simple example script is provided in the `examples/` directory to show
 importing the library programmatically.
 
+## Web interface
+
+An interactive frontend is available using Streamlit. Launch it with:
+
+```bash
+streamlit run webapp/app.py
+```
+
+You can upload a CSV, choose strategies/parameters, and immediately view
+performance and equity charts.
+
 ---
 
 ## License
